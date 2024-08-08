@@ -204,6 +204,26 @@ For a complete list of endpoints and their usage, refer to the comments in `serv
 
 I thank my two teammates (Nicholas Patel and Jinpeng Chen) for their help in this project.
 
+## Data Usage and Spotify API
+
+This project uses data obtained from the Spotify API for educational and demonstration purposes only. Please note the following important points:
+
+1. **Data Source**: The music data used in this application is sourced from the Spotify API. We do not claim ownership of this data.
+
+2. **Usage Restrictions**: The data obtained from Spotify should not be used for any commercial purposes. It is strictly for educational use within the context of this project.
+
+3. **Spotify Developer Terms**: If you plan to run this application or use the data import scripts, you must comply with Spotify's Developer Terms of Service. Please review these terms at [Spotify Developer Terms](https://developer.spotify.com/terms).
+
+4. **API Credentials**: To use the data import functionality, you will need to obtain your own Spotify API credentials. Do not share these credentials publicly.
+
+5. **Data Limitations**: The data provided by this application may not be up-to-date or complete. For the most current and accurate information, please refer to the official Spotify platform.
+
+6. **No Affiliation**: This project is not affiliated with, endorsed by, or sponsored by Spotify. It is an independent educational project.
+
+7. **Respect Copyright**: Ensure that your use of this application and its data respects all applicable copyright laws and Spotify's intellectual property rights.
+
+By using this application or its code, you agree to abide by these terms and any applicable laws and regulations regarding the use of third-party data and APIs.
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
