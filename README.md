@@ -35,6 +35,187 @@ Soundit is a sophisticated music streaming application designed to deliver an en
 
 ### 1. Clone the Repository
 
-bash
+```bash
 git clone https://github.com/RaghuRamSatt/soundit.git
 cd soundit
+```
+
+
+### 2. Database Setup
+
+1. Install MySQL Workbench 8.0 from [MySQL Downloads](https://dev.mysql.com/downloads/workbench/).
+2. Open MySQL Workbench.
+3. Import the "Soundit-dump-2" MySQL dump file to create the Soundit_test_2 schema.
+
+### 3. Backend Setup
+
+1. Install Python 3.10.8 from [Python Downloads](https://www.python.org/downloads/).
+2. Create and activate a virtual environment:
+
+
+```bash
+python -m venv venv
+source venv/bin/activate # On Windows use venv\Scripts\activate
+```
+
+3. Install the required dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+
+4. Update the database connection settings in `server/app.py`:
+
+```python
+connection = pymysql.connect(host='localhost',
+user='your_username',
+password='your_password',
+db='soundit_test_2',
+charset='utf8mb4',
+cursorclass=pymysql.cursors.DictCursor)
+```
+
+
+
+### 4. Frontend Setup
+
+1. Install Node.js v14.18.0 from [Node.js Downloads](https://nodejs.org/en/download/).
+2. Navigate to the frontend directory:
+
+```bash
+cd frontend
+```
+
+3. Install frontend dependencies:
+
+```bash
+npm install
+```
+
+
+## Usage
+
+### 1. Start the Backend Server
+
+1. Navigate to the server directory:
+
+```bash
+cd server
+```
+
+2. Run the Flask application:
+
+```bash
+python app.py
+```
+
+
+The backend server should now be running on `http://localhost:5000`.
+
+### 2. Start the Frontend Server
+
+1. Open a new terminal and navigate to the frontend directory:
+
+```bash
+cd frontend
+```
+
+
+2. Start the frontend server:
+
+```bash
+npx serve
+```
+
+
+The frontend should now be accessible at `http://localhost:3000`.
+
+### 3. Accessing Soundit
+
+Open your web browser and go to `http://localhost:3000` to access the Soundit application.
+
+## Importing Data
+
+### Importing Artist Data
+
+1. Navigate to the utils folder:
+
+```bash
+cd utils
+```
+
+2. Run the artist_data_import.py script:
+
+```bash
+python data_import.py
+python genre_insert.py
+```
+
+
+
+### Getting Additional Spotify Data
+
+1. Navigate to the getSpotifyData folder:
+
+```bash
+cd getSpotifyData
+```
+
+
+2. Open `generate_data.py` and fill in the `ID` and `SECRET` constant variables with your Spotify API credentials.
+3. Edit the `artists.csv` file with Spotify Artist IDs you want to import.
+4. Run the data generation script:
+
+```bash
+python generate_data.py
+```
+
+
+## Project Structure
+
+- `server/`: Contains the Flask backend application
+  - `app.py`: Main application file with API endpoints
+- `frontend/`: Contains the Vue.js frontend application
+  - `index.html`: Entry point for the frontend
+  - `menuBar.js`: Main Vue component for the application
+  - `admin.js`: Admin panel component
+- `utils/`: Utility scripts for data import
+- `getSpotifyData/`: Scripts for fetching data from Spotify API
+- `README.md`: This file
+- `requirements.txt`: Python dependencies
+
+## API Documentation
+
+The Soundit API provides the following main endpoints:
+
+- `/register`: User registration
+- `/login`: User authentication
+- `/search`: Search for artists, albums, tracks, and playlists
+- `/artist`: Get artist details
+- `/album`: Get album details
+- `/track`: Get track details
+- `/playlist`: Manage playlists
+- `/recommendations`: Get personalized recommendations
+
+For a complete list of endpoints and their usage, refer to the comments in `server/app.py`.
+
+## Contributing
+
+I thank my two teammates (Nicholas Patel and Jinpeng Chen) for their help in this project.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+
+## Acknowledgments
+
+- Spotify API for providing music data
+- Flask community for the excellent web framework
+- Vue.js team for the frontend framework
+
+## Contact
+
+Raghu Ram Sattanapalle
+
+Project Link: https://github.com/RaghuRamSatt/soundit
