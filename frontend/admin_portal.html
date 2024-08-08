@@ -1,0 +1,21 @@
+<script type="importmap">
+    {
+      "imports": {
+        "vue": "https://unpkg.com/vue@3/dist/vue.esm-browser.js"
+      }
+    }
+  </script>
+  <style>
+
+  </style>
+  
+  <div id="app">{{ message }}</div>
+  
+  <script type="module">
+    import { createApp } from 'vue'
+
+    import menubar from './admin.js'
+    createApp(menubar).mount('#app')
+  </script>
+  
+
